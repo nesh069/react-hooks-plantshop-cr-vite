@@ -10,7 +10,7 @@ function NewPlantForm({ onAddPlant }) {
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({ name, image, price: parseFloat(price) })
+      body: JSON.stringify({ name, image, price })
     })
       .then(res => res.json())
       .then(newPlant => {
@@ -26,7 +26,7 @@ function NewPlantForm({ onAddPlant }) {
       <input
         value={name}
         onChange={e => setName(e.target.value)}
-        placeholder="Plant Name"
+        placeholder="Plant name"
       />
       <input
         value={image}
