@@ -6,9 +6,9 @@ import Search from "./Search";
 function PlantPage() {
   return (
     <main>
-      <NewPlantForm />
-      <Search />
-      <PlantList />
+      <NewPlantForm onAddPlant={onAddPlant} />
+      <Search searchQuery={searchQuery} onSearch={onSearch} />
+      <PlantList plants={plants} />
     </main>
   );
 }
