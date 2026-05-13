@@ -4,11 +4,12 @@ function Search() {
   return (
     <div className="searchbar">
       <label htmlFor="search">Search Plants:</label>
-      <input
+      <input 
         type="text"
         id="search"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Type a name to search..."
-        onChange={(e) => console.log("Searching...")}
       />
     </div>
   );
